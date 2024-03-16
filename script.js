@@ -7,15 +7,22 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
+
+  let employees= arr.filter((item)=>{
+    return item.profession == "developer"
+  })
   
-  let employees = arr.map((item)=>{return item.name})
-  console.log(employees);
+  employees.map((item)=>{return item.name})
+   console.log(employees);
 
 }
 
 function PrintDeveloperbyForEach() {
   
-  arr.forEach((item)=> console.log(item.name));
+  arr.forEach((item)=> 
+  {
+    if(item.profession== "developer")
+    console.log(item.name)});
 }
 
 function addData() {
